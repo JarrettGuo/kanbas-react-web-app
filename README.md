@@ -1,5 +1,5 @@
 # Kanbas Project
-
+[Project Link](https://a2--jarrett-guo-web.netlify.app/)
 ## Overview
 
 I've taken my first steps into web development by bootstrapping this project with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment Edit</title>
+</head>
+<body>
+    <div class="container">
+        <!-- head -->
+        <div class="head">
+            <select id="edit-assignment">
+                <option value="Speed Grader">Speed Grader</option>
+                <option value="Duplicate">Duplicate</option>
+                <option value="Delete">Delets</option>
+                <option value="MoveTo">Move To...</option>
+                <option value="SendTo">Send To...</option>
+                <option value="CopyTo">Copy To...</option>
+                <option value="ShareToCommons">Share to commons</option>
+            </select>
+        </div>
+        <hr>
+        <!-- content -->
+        <h2>Assignment Name</h2>
+        <input type="text" id="assignment-names" value="A1 - ENV + HTML"><br><br>
+        <textarea id="assignment-description" cols="30" rows="2" >This is the assignment description</textarea><br><br>
+        <label for="point-text">Points</label><br>
+        <input type="text" id="point-text" value="100"><br><br>
+        <label for="assignment-group">Assignment Group</label><br>
+        <select id="assignment-group">
+            <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+        </select><br><br>
+        <label for="display-grade-as">Display Grade as</label><br>
+        <select id="display-grade-as">
+            <option value="percentage">Percentage</option>
+        </select><br><br>
+        <label for="submission-type">Submission Type</label><br>
+        <select id="submission-type">
+            <option value="online">Online</option>
+        </select><br><br>
+        <label>Online Entry Options</label><br>
+        <input type="checkbox" name="online-entry-options" id="text-entry" value="text">
+        <label for="text-entry">Text Entry</label><br>
+        <input type="checkbox" name="online-entry-options" id="website-url" value="url">
+        <label for="website-url">Website URL</label><br>
+        <input type="checkbox" name="online-entry-options" id="media-recordings" value="media">
+        <label for="media-recordings">Media Recordings</label><br>
+        <input type="checkbox" name="online-entry-options" id="student-annotation" value="annotation">
+        <label for="student-annotation">Student Annotation</label><br>
+        <input type="checkbox" name="online-entry-options" id="file-uploads" value="file">
+        <label for="file-uploads">File Uploads</label><br><br>
+
+        <label>Assign</label>
+        <label for="assign-to">Assign to</label><br>
+        <input type="text" id="assign-to" value="Everyone"><br><br>
+        <label for="due">Due</label><br>
+        <input type="date" id="due-date" value="2021-01-01"><br><br>
+        <label for="available-from">Available from</label><br>
+        <input type="date" id="available-from" value="2021-01-01"><br><br>
+        <label for="until">Until</label><br>
+        <input type="date" id="until" value="2021-01-01"><br><br>
+        <button>Cancel</button>
+        <button>Save</button>
+    </div>
+</body>
+</html>

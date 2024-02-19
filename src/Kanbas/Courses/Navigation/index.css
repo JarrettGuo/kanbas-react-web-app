@@ -1,0 +1,38 @@
+.kanbas-course {
+    margin-left: 90px;
+  }
+  
+  .wd-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    width: 125px;
+    margin: 0 10px;
+  }
+  
+  .home-screen .fa-chevron-down {
+    font-size: 30px;
+  }
+  
+  .wd-navigation li {
+    padding: 10px 0 0 10px; /* 更新了这里的padding，确保文本不会因为左边框的添加而移动 */
+    margin-top: 10px;
+  }
+  
+  /* 当li元素处于激活状态时，改变其样式 */
+  .wd-navigation li.wd-active {
+    color: black;
+    border-left: 2px solid black; /* 添加左边框 */
+  }
+  
+  .wd-navigation a {
+    color: red; /* 默认情况下链接颜色为红色 */
+    text-decoration: none;
+  }
+  
+  /* 当链接被点击（即处于激活状态）时，改变其颜色为黑色 */
+  .wd-navigation a:active,
+  .wd-navigation li.wd-active a { /* 添加这个选择器来处理已激活的链接 */
+    color: black; /* 点击时的链接颜色变为黑色 */
+  }
+  

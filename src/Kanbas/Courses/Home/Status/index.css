@@ -1,0 +1,4 @@
+.RightPart {
+  overflow-y: auto; /* Enables vertical scrolling */
+  min-width: 243px; /* Sets the minimum width of the status container */
+}

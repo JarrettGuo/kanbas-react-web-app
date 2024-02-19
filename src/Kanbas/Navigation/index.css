@@ -1,0 +1,41 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    text-align: center;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden; /* 防止内容溢出 */
+}
+
+.wd-kanbas-navigation li img {
+    width: 100%; /* 使图片宽度与导航栏相同 */
+    height: auto; /* 保持图片比例 */
+}
+
+.wd-kanbas-navigation li {
+    padding: 8px;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+}
+
+.wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+    display: flex; /* 使用Flex布局以便垂直居中 */
+    flex-direction: column; /* 图标和文字垂直排列 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+}
+
+.wd-kanbas-navigation li.active, .wd-kanbas-navigation li.active a {
+    background-color: white;
+}
+
+.wd-kanbas-navigation li.active .icon, .wd-kanbas-navigation li.active .nav-link {
+    color: red; /* 点击时图标和文字变成红色 */
+}

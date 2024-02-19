@@ -1,0 +1,7 @@
+.custom-ellipse {
+    display: inline-block;
+    padding: 0.25rem 1rem; /* Adjust padding to control the shape */
+    border: 1px solid #000; /* Add a border */
+    border-radius: 50rem; /* Fully rounded corners */
+  }
+  

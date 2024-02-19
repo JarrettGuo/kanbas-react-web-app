@@ -1,0 +1,15 @@
+.d-flex {
+    display: flex;
+    flex-wrap: nowrap; /* 防止子项换行 */
+  }
+  
+  .Module {
+    flex-grow: 1; /* 允许模块组件根据可用空间伸缩 */
+    min-width: 700px; /* 设置最小宽度 */
+  }
+  
+  .Status {
+    width: 300px; /* 或者你想要的固定宽度 */
+    min-width: 250px; /* 或者设置最小宽度，取决于内容 */
+  }
+  

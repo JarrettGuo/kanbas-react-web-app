@@ -48,7 +48,7 @@ export default function Status() {
         <div className="to-do mt-3 me-3">
         <h5>To Do</h5>
           <div className="to-do-message clearfix">
-          <RiMessage3Fill />
+          <RiMessage3Fill className='float-start text-danger mt-1'/>
             <span className="float-start ms-2 message"><a href="/" className="text-decoration-none text-danger">Grade A1 - ENV + HTML</a><br />
               <small className="text-secondary">100 points Sep 18 at 11:59pm</small>
             </span>

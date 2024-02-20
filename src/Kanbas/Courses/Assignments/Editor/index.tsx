@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import Database from "../../../Database";
 import { FaCheck,FaPlus } from "react-icons/fa6";
+import { SlCalender } from "react-icons/sl";
 
 export default function AssignmentEditor() {
   const { assignments } = Database;
@@ -26,13 +27,13 @@ export default function AssignmentEditor() {
                 <i className="fa-solid fa-ellipsis-vertical" />
               </button>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Speed Grader</a></li>
-                <li><a className="dropdown-item" href="#">Duplicate</a></li>
-                <li><a className="dropdown-item" href="#">Delete</a></li>
-                <li><a className="dropdown-item" href="#">Move To...</a></li>
-                <li><a className="dropdown-item" href="#">Send To...</a></li>
-                <li><a className="dropdown-item" href="#">Copy To...</a></li>
-                <li><a className="dropdown-item" href="#">Share to commons</a></li>
+                <li><a className="dropdown-item" href="/">Speed Grader</a></li>
+                <li><a className="dropdown-item" href="/">Duplicate</a></li>
+                <li><a className="dropdown-item" href="/">Delete</a></li>
+                <li><a className="dropdown-item" href="/">Move To...</a></li>
+                <li><a className="dropdown-item" href="/">Send To...</a></li>
+                <li><a className="dropdown-item" href="/">Copy To...</a></li>
+                <li><a className="dropdown-item" href="/">Share to commons</a></li>
               </ul>
             </div>
           </div>
@@ -61,18 +62,18 @@ export default function AssignmentEditor() {
                   <span className="btn-group-text me-2">Assignemnt Group</span>
                   <button type="button" className="btn dropdown-toggle btn-light flex-grow-1" data-bs-toggle="dropdown">ASSIGNMENTS</button>
                   <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="#">link1</a></li>
-                    <li><a className="dropdown-item" href="#">link2</a></li>
-                    <li><a className="dropdown-item" href="#">link3</a></li>
+                    <li><a className="dropdown-item" href="/">link1</a></li>
+                    <li><a className="dropdown-item" href="/">link2</a></li>
+                    <li><a className="dropdown-item" href="/">link3</a></li>
                   </ul>
                 </div>
                 <div className="dropdown dropdown-menu-end mt-3 ms-2 d-flex align-items-center">
                   <span className="btn-group-text me-2">Display Grade as</span>
                   <button type="button" className="btn dropdown-toggle btn-light flex-grow-1" data-bs-toggle="dropdown">Percentage</button>
                   <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="#">link1</a></li>
-                    <li><a className="dropdown-item" href="#">link2</a></li>
-                    <li><a className="dropdown-item" href="#">link3</a></li>
+                    <li><a className="dropdown-item" href="/">link1</a></li>
+                    <li><a className="dropdown-item" href="/">link2</a></li>
+                    <li><a className="dropdown-item" href="/">link3</a></li>
                   </ul>
                 </div>
                 <div className="d-flex align-items-start mt-3">
@@ -90,21 +91,21 @@ export default function AssignmentEditor() {
                           <div className="mb-2"><strong>Due</strong></div> 
                           <div className="input-group mb-3">
                             <input type="text" className="form-control" defaultValue="Sun 18. 2023, 11:59 PM" />
-                            <span className="input-group-text"><i className="fas fa-calendar-alt" /></span>
+                            <span className="input-group-text"><SlCalender /></span>
                           </div>
                         </div>                                                            
                         <div className="col-6 pe-1">
                           <div className="mb-1"><strong>Available from</strong></div>
                           <div className="input-group mb-3">
                             <input type="text" className="form-control" defaultValue="Sun 18. 2023, 11:59 PM" />
-                            <span className="input-group-text"><i className="fas fa-calendar-alt" /></span>
+                            <span className="input-group-text"><SlCalender /></span>
                           </div>
                         </div>
                         <div className="col-6 ps-1">
                           <div className="mb-1"><strong>Until</strong></div>
                           <div className="input-group mb-3">
                             <input type="text" className="form-control" />
-                            <span className="input-group-text"><i className="fas fa-calendar-alt" /></span>
+                            <span className="input-group-text"><SlCalender /></span>
                           </div>
                         </div>
                       </div>

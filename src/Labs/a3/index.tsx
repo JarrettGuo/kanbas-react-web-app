@@ -11,8 +11,8 @@ export default function Assignment3() {
   return (
     <div>
      <h1>Assignment 3</h1>
-      <ConditionalOutput/>
       <Styles/>
+      <ConditionalOutput/>
       <Classes/>
       <PathParameters/>
       <JavaScript/>

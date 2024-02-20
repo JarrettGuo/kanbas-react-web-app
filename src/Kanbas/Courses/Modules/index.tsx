@@ -12,9 +12,9 @@ export default function Modules() {
         <MdOutlinePublishedWithChanges className="text-success me-2"/>&nbsp;Publish All
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a className="dropdown-item" href="#">link 1</a></li>
-            <li><a className="dropdown-item" href="#">link 2</a></li>
-            <li><a className="dropdown-item" href="#">link 3</a></li>
+            <li><a className="dropdown-item" href="/">link 1</a></li>
+            <li><a className="dropdown-item" href="/">link 2</a></li>
+            <li><a className="dropdown-item" href="/">link 3</a></li>
         </ul>
         <button className="btn btn-light head-button__ViewProgress border-black border-1 me-2">ViewProgress</button>
         <button className="btn btn-light head-button__CollapseAll border-black border-1 me-2">CollapseAll</button>

@@ -16,9 +16,9 @@ export default function Grades() {
           <button className="btn btn-light btn-outline-dark"><IoMdSettings /></button>
           <button className="btn btn-light btn-outline-dark mx-2 dropdown-toggle" data-bs-toggle="dropdown"><MdOutlineOutput /> Export</button>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">link1</a></li>
-            <li><a className="dropdown-item" href="#">link2</a></li>
-            <li><a className="dropdown-item" href="#">link3</a></li>
+            <li><a className="dropdown-item" href="/">link1</a></li>
+            <li><a className="dropdown-item" href="/">link2</a></li>
+            <li><a className="dropdown-item" href="/">link3</a></li>
           </ul>
           <button className="btn btn-light btn-outline-dark"><MdInput /> Import</button>
         </div>

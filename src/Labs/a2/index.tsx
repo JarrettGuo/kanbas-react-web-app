@@ -799,22 +799,22 @@ export default function Assignment2() {
         </h2>
         <ul className="nav nav-tabs">
             <li className="nav-item">
-            <a className="nav-link active" href="#">
+            <a className="nav-link active" href="/">
                 Active
             </a>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/">
                 Link
             </a>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/">
                 Link
             </a>
             </li>
             <li className="nav-item">
-            <a className="nav-link disabled" href="#" tabIndex={-1}>
+            <a className="nav-link disabled" href="/" tabIndex={-1}>
                 Disabled
             </a>
             </li>
@@ -830,7 +830,7 @@ export default function Assignment2() {
                 Some quick example text to build on the card title and make up the bulk
                 of the card's content.
             </p>
-            <a href="#" className="btn btn-primary">
+            <a href="/" className="btn btn-primary">
                 Go somewhere
             </a>
             </div>

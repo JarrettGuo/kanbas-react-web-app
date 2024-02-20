@@ -10,20 +10,29 @@
             <tr valign="top">
                 <!-- Kanbas Navigation -->
                 <td>
-                    <ul>
-                        <li><a href="/Kanbas/Account/Navigation/index.html">Account</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul> 
+                    <ul class="wd-kanbas-navigation">
+                        <li class="wb-kanbas-navigation-logo"><a href="http://northeastern.edu"><img src="../../../images/logo.jpg" alt="N"></a>
+                        </li>
+                        <li class="wd-active account bg-light"><a class="text-danger" href="/Kanbas/Account/Profile/screen.html"><i class="fa-solid fa-user" style="color: #acabab;"></i> Account</a>
+                        </li>
+                        <li class="wd-active"><a href="/Kanbas/Dashboard/screen.html"><i class="fa fa-tachometer"></i> Dashboard</a>
+                        </li>
+                        <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a>
+                        </li>
+                        <li class="wd-active"><a href="#"><i class="fa fa-calendar"></i>Calendar</a>
+                        </li>
+                        <li class="wd-active"><a href="#"><i class="fa-solid fa-envelope-open-text"></i><br>Inbox</a>
+                        </li>
+                        <li class="wd-active"><a href="#"><i class="fa-regular fa-clock"></i>History</a>
+                        </li>
+                        <li class="wd-active"><a href="#"><i class="fa-solid fa-network-wired"></i>Studio</a>
+                        </li>
+                        <li class="wd-active"><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Commons</a>
+                        </li>
+                        <li class="wd-active"><a href="#"><i class="fa-solid fa-question"></i><br>Help</a></li>
                 </td>
                 <!-- Profile Navigation -->
-                <td>
+                <td  class="home-screen">
                     <ul>
                         <li><a href="#">Notifications</a></li>
                         <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
@@ -37,7 +46,7 @@
                     </ul>     
                 </td>
                 <td>
-                    <div class="content">
+                    <div>
                         <h2>Jose Annunziato</h2>
                         <label for="name">Name:*</label>
                         <input type="text" name="name" id="name" value="Jose Annunziato">

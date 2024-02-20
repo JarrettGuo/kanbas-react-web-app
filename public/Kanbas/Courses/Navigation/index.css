@@ -1,0 +1,28 @@
+.wd-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0px;
+    width: 125px;
+    margin: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.home-screen .fa-chevron-down{
+    font-size: 30px;
+}
+.wd-navigation li {
+    padding-left: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.wd-navigation .wd-active:active{
+    color: black;
+    padding-left: 10px;
+    border-left: 2px solid black;
+}
+
+.wd-navigation a {
+    color: red;
+    text-decoration: none;
+}

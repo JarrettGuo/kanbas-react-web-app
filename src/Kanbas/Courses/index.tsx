@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Database from "../../Kanbas/Database";
-import { Navigate, Route, Routes, useParams, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useParams, useLocation} from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
@@ -11,6 +11,18 @@ import Grades from "./Grades";
 import { FaGlasses } from "react-icons/fa";
 
 export default function Courses() {
+  const [isExtraSmScreen, setIsExtraSmScreen] = useState(window.innerWidth < 600);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMdScreen(window.innerWidth >= 768 && window.innerWidth < 992);
+      setIsSmScreen(window.innerWidth < 768);
+      setIsExtraSmScreen(window.innerWidth < 530); // 更新isExtraSmScreen状态
+    };
+  
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   const courses = Database.courses;
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
@@ -41,9 +53,9 @@ export default function Courses() {
       setShowNavigation(true);
     }
   }, [isMdScreen, isSmScreen]);
-  // Adjust content style based on navigation visibility
+  // Adjust content style based on navigation visibility and extra small screen size
   const contentStyle = {
-    left: showNavigation ? "250px" : "90px",
+    left: isExtraSmScreen ? "0px" : showNavigation ? "250px" : "90px",
     top: "65px",
   };
 
@@ -96,14 +108,25 @@ export default function Courses() {
 
   return (
     <div className="kanbas-course">
-      <div className="clearfix p-2 border-1 border-gary border-bottom py-2">
-        <h1 className="text-danger float-start" style={{fontSize:"30px"}}>
+      <div
+        className={`d-flex align-items-center justify-content-between p-2 border-1 border-gray border-bottom ${isMdScreen || isSmScreen ? 'bg-dark text-white' : ''}`}
+        style={{ fontSize: isMdScreen || isSmScreen ? '15px' : '30px' }}
+      >
+        <div className="d-flex align-items-center">
           <button className='btn btn-light text-danger' onClick={toggleNavigation}><HiMiniBars3 /></button>
-          &nbsp;&nbsp;{course?.number}.{course?.name}
-          <span style={{ color: 'black', fontSize: '25px' }}> {pageTitle && ` > ${pageTitle}`}</span>
-        </h1>
-        <div className="text-center">
-          <button className="btn btn-light border-1 border-black float-end"><FaGlasses />&nbsp;Student View</button>
+          <h1 className={`ms-2 text-danger ${isMdScreen || isSmScreen ? 'text-center' : ''}`} style={{fontSize: isMdScreen || isSmScreen ? '15px' : '30px'}}>
+            {course?.number}.{course?.name}
+            <span style={{ color: isMdScreen || isSmScreen ? 'white' : 'black', fontSize: isMdScreen || isSmScreen ? '15px' : '25px' }}>
+              {pageTitle && ` > ${pageTitle}`}
+            </span>
+          </h1>
+        </div>
+        <div>
+          <button className={`btn btn-light border-1 ${isMdScreen || isSmScreen ? 'border-white' : 'border-black'}`}>
+            <FaGlasses />
+            {/* Conditionally render the button text based on screen size */}
+            {(!isMdScreen && !isSmScreen) && <span>&nbsp;Student View</span>}
+          </button>
         </div>
       </div>
       {showNavigation && <CourseNavigation />}

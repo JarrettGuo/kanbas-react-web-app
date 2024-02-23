@@ -5,7 +5,7 @@
   
   .Module {
     flex-grow: 1; /* 允许模块组件根据可用空间伸缩 */
-    min-width: 700px; /* 设置最小宽度 */
+    min-width: 500px; /* 设置最小宽度 */
   }
   
   .Status {

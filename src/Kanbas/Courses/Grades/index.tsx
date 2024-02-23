@@ -10,7 +10,7 @@ export default function Grades() {
   const as = assignments.filter((assignment) => assignment.course === courseId);
   const es = enrollments.filter((enrollment) => enrollment.course === courseId);
   return (
-    <div className="mt-5 me-3">
+    <div className="my-5 me-3">
       <div>
         <div className="header d-flex flex-row-reverse">
           <button className="btn btn-light btn-outline-dark"><IoMdSettings /></button>

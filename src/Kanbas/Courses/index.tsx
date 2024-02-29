@@ -11,12 +11,12 @@ import Grades from "./Grades";
 import { FaGlasses } from "react-icons/fa";
 
 export default function Courses() {
-  const [isExtraSmScreen, setIsExtraSmScreen] = useState(window.innerWidth < 600);
+  const [isExtraSmScreen, setIsExtraSmScreen] = useState(window.innerWidth < 576);
   useEffect(() => {
     const handleResize = () => {
       setIsMdScreen(window.innerWidth >= 768 && window.innerWidth < 992);
       setIsSmScreen(window.innerWidth < 768);
-      setIsExtraSmScreen(window.innerWidth < 530); // 更新isExtraSmScreen状态
+      setIsExtraSmScreen(window.innerWidth < 576); // 更新isExtraSmScreen状态
     };
   
     window.addEventListener('resize', handleResize);
@@ -57,6 +57,9 @@ export default function Courses() {
   const contentStyle = {
     left: isExtraSmScreen ? "0px" : showNavigation ? "250px" : "90px",
     top: "65px",
+  };
+  const headerStyle = {
+    marginLeft: isExtraSmScreen ? "0px" : "80px",
   };
 
   // 解析当前路径来获取相应的标题
@@ -107,11 +110,10 @@ export default function Courses() {
   const pageTitle = getPageTitle(location.pathname);
 
   return (
-    <div className="kanbas-course">
+    <div className="kanbas-course" style={headerStyle}>
       <div
         className={`d-flex align-items-center justify-content-between p-2 border-1 border-gray border-bottom ${isMdScreen || isSmScreen ? 'bg-dark text-white' : ''}`}
-        style={{ fontSize: isMdScreen || isSmScreen ? '15px' : '30px' }}
-      >
+        style={{ fontSize: isMdScreen || isSmScreen ? '15px' : '30px' }}>
         <div className="d-flex align-items-center">
           <button className='btn btn-light text-danger' onClick={toggleNavigation}><HiMiniBars3 /></button>
           <h1 className={`ms-2 text-danger ${isMdScreen || isSmScreen ? 'text-center' : ''}`} style={{fontSize: isMdScreen || isSmScreen ? '15px' : '30px'}}>
@@ -132,26 +134,26 @@ export default function Courses() {
       {showNavigation && <CourseNavigation />}
       <div className="overflow-y-scroll position-fixed bottom-0 end-0" style={contentStyle}>
         <Routes>
-              <Route path="/" element={<Navigate to="Home" />} />
-              <Route path="Home" element={<Home/>} />
-              <Route path="Modules" element={<Modules/>} />
-              <Route path="Piazza" element={<h1>Piazza</h1>} />
-              <Route path="ZoomMeetings" element={<h1>Zoom Meetings</h1>} />
-              <Route path="Assignments" element={<Assignments/>} />
-              <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>} />
-              <Route path="Grades" element={<Grades/>} />
-              <Route path="People" element={<h1>People</h1>} />
-              <Route path="PanoptoVideo" element={<h1>Panopto Video</h1>} />
-              <Route path="Discussions" element={<h1>Discussions</h1>} />
-              <Route path="Announcements" element={<h1>Announcements</h1>} />
-              <Route path="Pages" element={<h1>Pages</h1>} />
-              <Route path="Files" element={<h1>Files</h1>} />
-              <Route path="Rubrics" element={<h1>Rubrics</h1>} />
-              <Route path="Outcomes" element={<h1>Outcomes</h1>} />
-              <Route path="Collaborations" element={<h1>Collaborations</h1>} />
-              <Route path="Syllabus" element={<h1>Syllabus</h1>} />
-              <Route path="Settings" element={<h1>Settings</h1>} />
-              </Routes>
+          <Route path="/" element={<Navigate to="Home" />} />
+          <Route path="Home" element={<Home/>} />
+          <Route path="Modules" element={<Modules/>} />
+          <Route path="Piazza" element={<h1>Piazza</h1>} />
+          <Route path="ZoomMeetings" element={<h1>Zoom Meetings</h1>} />
+          <Route path="Assignments" element={<Assignments/>} />
+          <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>} />
+          <Route path="Grades" element={<Grades/>} />
+          <Route path="People" element={<h1>People</h1>} />
+          <Route path="PanoptoVideo" element={<h1>Panopto Video</h1>} />
+          <Route path="Discussions" element={<h1>Discussions</h1>} />
+          <Route path="Announcements" element={<h1>Announcements</h1>} />
+          <Route path="Pages" element={<h1>Pages</h1>} />
+          <Route path="Files" element={<h1>Files</h1>} />
+          <Route path="Rubrics" element={<h1>Rubrics</h1>} />
+          <Route path="Outcomes" element={<h1>Outcomes</h1>} />
+          <Route path="Collaborations" element={<h1>Collaborations</h1>} />
+          <Route path="Syllabus" element={<h1>Syllabus</h1>} />
+          <Route path="Settings" element={<h1>Settings</h1>} />
+        </Routes>
       </div>
     </div>
     );

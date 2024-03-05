@@ -6,11 +6,14 @@ import ConditionalOutput from "./ConditionalOutput";
 import Highlight from "./Highlight";
 import Add from "./Add";
 import TodoList from "./todos/TodoList";
+import ReduxTodoList from "../a4/ReduxExamples/todos/TodoList";
+
 
 export default function Assignment3() {
   return (
     <div>
      <h1>Assignment 3</h1>
+      <ReduxTodoList/>
       <Styles/>
       <Classes/>
       <ConditionalOutput/>

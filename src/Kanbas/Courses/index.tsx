@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Database from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams, useLocation} from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
@@ -10,7 +9,7 @@ import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 import { FaGlasses } from "react-icons/fa";
 
-export default function Courses() {
+export default function Courses({ courses }: { courses: any[] }) {
   const [isExtraSmScreen, setIsExtraSmScreen] = useState(window.innerWidth < 576);
   useEffect(() => {
     const handleResize = () => {
@@ -23,7 +22,6 @@ export default function Courses() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   
-  const courses = Database.courses;
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
   const location = useLocation();

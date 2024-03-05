@@ -1,58 +1,31 @@
-# Kanbas React Application
-[Project Link](https://a3--jarrett-guo-web.netlify.app/#/Labs)
+# Kanbas Project
+
 ## Overview
 
-This project represents an advanced iteration of the Kanbas application, where the focus has shifted towards a dynamic, interactive experience using React.js. The application has been designed to simulate a comprehensive educational platform, featuring functionality for course management, navigation, and user interaction.
+I've taken my first steps into web development by bootstrapping this project with [Create React App](https://github.com/facebook/create-react-app).
 
-## Project Structure
+## Available Scripts
 
-The application is structured around several key React components, each serving a distinct purpose within the overall functionality of the Kanbas system:
+In my project directory, I have the following commands at my disposal:
 
-### Kanbas Navigation
+- `npm start`: This fires up the app in development mode. I can view it in the browser at [http://localhost:3000](http://localhost:3000). It's pretty handy since the page reloads automatically if I edit anything, and it also shows me lint errors in the console.
 
-A component that renders the primary navigation menu, facilitating easy access to different sections of the application such as Account, Dashboard, Courses, and Calendar.
+- `npm test`: This one launches the test runner in an interactive watch mode. For more info, I can check out the [running tests](https://facebook.github.io/create-react-app/docs/running-tests) section.
 
-### Dashboard
+- `npm run build`: When I'm ready to go live, this builds the app for production to the `build` folder. It bundles React in production mode and optimizes the build for the best performance. The build is minified, and the filenames include hashes—everything I need to deploy my app.
 
-This component serves as the landing page of the application, showcasing a summary view of the available courses and providing quick access to their content.
+- `npm run eject`: **Important: this is irreversible.** Once I `eject`, there's no going back! If I decide I'm not happy with the build tool and configuration choices, I can `eject` any time. This removes the single build dependency from my project and copies all the configuration files and transitive dependencies (like webpack, Babel, ESLint, etc) right into my project, so I have full control over them.
 
-### Courses
+> A quick note: I don't need to use `eject`. It's there for when I'm ready to take full control, but the preset configuration is suitable for small and middle deployments, and I'm not obligated to use it.
 
-The Courses component acts as a container for individual course content. It dynamically loads course-specific information, including modules, assignments, and grades, based on user interaction with the Dashboard or the navigation menu.
+## CSS and Bootstrap Styling
 
-### Course Navigation
+I've revisited the Kanbas screens from the previous assignment where I left the documents in their natural, unstyled state. This time around, I've spiced things up with CSS and Bootstrap to layout and color the screens, so they align more with the provided screenshots.
 
-Nested within the Courses component, the Course Navigation component provides links to different parts of a course such as Home, Modules, Assignments, and Grades, enhancing the user experience by enabling easy navigation within a course.
+I've put in the effort to style the HTML to make the screens look as close as possible to the intended design. While they don't need to be a pixel-perfect match, I've followed provided guidelines and requirements for a consistent and appealing look and feel.
 
-### Modules and Assignments
+## Further Learning
 
-These components render the educational content of a course, with Modules displaying a structured list of topics covered in the course and Assignments presenting the tasks assigned to students.
+To learn more about how to use Create React App, I've been reading through the [documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Grades
-
-The Grades component is responsible for displaying students' performance metrics across different assignments within a course, offering both students and instructors a clear overview of academic progress.
-
-## React Component Implementation
-
-React components in this application are designed to be modular and reusable. Each component is crafted to encapsulate a specific functionality or UI segment, promoting maintainability and scalability. Components communicate through props and state management, ensuring a seamless flow of data throughout the application.
-
-### Data Management
-
-The application utilizes a JSON-based "database" for storing and retrieving data related to courses, modules, assignments, and users. This approach simulates interaction with a backend data store, allowing for dynamic content rendering based on the stored data.
-
-### Routing and Navigation
-
-React Router is employed to manage navigation within the application, enabling the creation of a single-page application (SPA) experience. This setup allows users to navigate through different components without the need for page reloads, leading to a more fluid and responsive user interface.
-
-## Future Enhancements
-
-While the current implementation provides a solid foundation for a functional educational platform, future enhancements could include:
-
-- Integration with a real backend service for dynamic data retrieval and storage.
-- Enhanced user authentication and authorization for personalized user experiences.
-- Expansion of the grading system to include more detailed analytics and feedback mechanisms.
-- Implementation of collaborative tools such as forums or live chat to foster community engagement among users.
-
-## Conclusion
-
-The Kanbas React Application exemplifies the power of React.js in building complex, interactive web applications. Through careful component design and effective state management, the application delivers a comprehensive educational platform that can be further extended to meet a wide range of teaching and learning needs.
+And for a deeper dive into React, I'm exploring the [React documentation](https://reactjs.org/).

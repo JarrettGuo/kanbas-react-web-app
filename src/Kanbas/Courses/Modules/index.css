@@ -1,5 +1,5 @@
 .wd-modules,
-.wd-modules * {
+.wd-modules .list-group-item{
     border-radius: 0%;
     border: none;
     margin: 0px;
@@ -12,7 +12,7 @@
 
 .wd-modules > li {
     background-color: lightgray;
-    border: 1px solid gray !important;
+    border: 1px solid rgb(167, 167, 167) !important;
     border-left: none !important;
     min-width: 500px; /* Set minimum width for modules */
 }
@@ -23,9 +23,7 @@
 }
 
 .wd-modules > li > ul > li {
-    padding: 5px;
     border-top: 1px solid gray !important;
-    border-left: 2px solid green;
 }
 
 .wd-modules > li {
